@@ -1,5 +1,6 @@
-import {React, useState,useEffect} from "react";
+import { React, useState, useEffect } from "react";
 import { Link, Element } from 'react-scroll';
+import "../styles/Scroller.css";
 
 
 import people from "../Images/people.png";
@@ -43,13 +44,38 @@ function Home() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const imageSize = 80 + scrollPosition * 0.005;
+
+  // For infinte scroll of TestimonialsCard
+
+  useEffect(() => {
+    const scrollers = document.querySelectorAll(".scroller");
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation();
+    }
+
+    function addAnimation() {
+      scrollers.forEach((scroller) => {
+        scroller.setAttribute("data-animated", true);
+
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute("aria-hidden", true);
+          scrollerInner.appendChild(duplicatedItem);
+        });
+      });
+    }
+  }, []);
 
 
   return (
@@ -65,34 +91,36 @@ function Home() {
           <h3>Powerful management platform designed to streamline your business operations, boost productivity, and drive success</h3>
 
           {isHovered ? (
-            
-              <button style={divStyle}
-                onMouseEnter={handleHover}
-                onMouseLeave={handleMouseOut}
-                className="start-button"
-              >
-                Get Started <FontAwesomeIcon icon={faCircleArrowRight} style={{ color: "#ffffff" }} />
-              </button>
 
-            
+            <button style={divStyle}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseOut}
+              className="start-button"
+            >
+              Get Started <FontAwesomeIcon icon={faCircleArrowRight} style={{ color: "#ffffff" }} />
+            </button>
+
+
           ) : (
-            <button 
+            <button
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseOut}
               className="start-button"
             >
               Get Started
             </button>
-            
+
           )}
           <a href="https://www.youtube.com/" target="_blank"><button className="demo-button">Watch Demo           <FontAwesomeIcon icon={faCirclePlay} style={{ color: "#000000" }} /></button></a>
-          <img src="https://framerusercontent.com/images/t9qCSNfZSNdBCMSiohCGNEIl4.jpg?scale-down-to=2048" alt="charts" 
-           style={{
-          width: `${imageSize}%`,
-          height: 'auto', // To maintain aspect ratio
-          transition: 'width 0.01s ease-in-out', // Optional: Add a transition effect
-        }}
-         ></img>
+          <img src="https://framerusercontent.com/images/t9qCSNfZSNdBCMSiohCGNEIl4.jpg?scale-down-to=2048" alt="charts"
+            style={{
+              width: `${imageSize}%`,
+              height: 'auto', // To maintain aspect ratio
+              transition: 'width 0.01s ease-in-out', // Optional: Add a transition effect
+            }}
+
+
+          ></img>
         </center>
       </section>
       {/*------------------------- FEATURES SECTION------------------------- */}
@@ -115,7 +143,7 @@ function Home() {
           </div>
           <div className="right-box">
             <img src="https://framerusercontent.com/images/qJeaFhSmQ29M1S55GRW5kYb4.png?scale-down-to=1024"></img>
-            <h1>Smart Task Management</h1>
+            <h2>Smart Task Management</h2>
             <h3>Say goodbye to chaos with our smart task management system</h3>
           </div>
         </div>
@@ -170,9 +198,9 @@ function Home() {
       {/* ---------------INTEGRATION SECTION------------ */}
 
       <section className="integrations">
-      <div>
-        
-      </div>
+        <div>
+
+        </div>
         <center>
           <Initials
             content="⚒ INTEGRATIONS"
@@ -276,32 +304,33 @@ function Home() {
           <h3>Discover why our clients love working with us. Read their testimonials and learn how we has helped businesses.</h3>
         </div>
 
-        <div className="testimonials-cards">
-          <TestimonialsCard
-            message={"Manage Wise transformed our team's productivity. The intuitive interface and powerful features have made a significant impact on our daily operations"}
-            name="Emily"
-            profile="Art Director"
-            imageURL="https://framerusercontent.com/images/OOtXrjMtLK5Xx3QTQXHynwpqYi4.jpg"
-          />
-          <TestimonialsCard
-            message={"Manage Wise transformed our team's productivity. The intuitive interface and powerful features have made a significant impact on our daily operations"}
-            name="emily"
-            profile="Art Director"
-            imageURL="https://framerusercontent.com/images/OOtXrjMtLK5Xx3QTQXHynwpqYi4.jpg"
-          />
-          <TestimonialsCard
-            message={"Manage Wise transformed our team's productivity. The intuitive interface and powerful features have made a significant impact on our daily operations"}
-            name="emily"
-            profile="Art Director"
-            imageURL="https://framerusercontent.com/images/OOtXrjMtLK5Xx3QTQXHynwpqYi4.jpg"
-          />
-          <TestimonialsCard
-            message={"Manage Wise transformed our team's productivity. The intuitive interface and powerful features have made a significant impact on our daily operations"}
-            name="Emily"
-            profile="Art Director"
-            imageURL="https://framerusercontent.com/images/OOtXrjMtLK5Xx3QTQXHynwpqYi4.jpg"
-          />
-
+        <div className="testimonials-cards scroller" data-direction="right" data-speed="slow">
+          <div className="scroller__inner">
+            <TestimonialsCard
+              message={"Manage Wise transformed our team's productivity. The intuitive interface and powerful features have made a significant impact on our daily operations"}
+              name="Emily"
+              profile="Art Director"
+              imageURL="https://framerusercontent.com/images/OOtXrjMtLK5Xx3QTQXHynwpqYi4.jpg"
+            />
+            <TestimonialsCard
+              message={"Using this product has been a game-changer for our team. The collaboration features and intuitive interface have greatly improved our productivity."}
+              name="David"
+              profile="Freelancer"
+              imageURL="https://framerusercontent.com/images/mIAsKrgLvd7WbLFFsh6f6YobhSc.jpg"
+            />
+            <TestimonialsCard
+              message={"I can't imagine running my business without this product. The automation features have saved me hours of manual work, allowing me to focus on strategic tasks."}
+              name="Alex"
+              profile="IT Manager"
+              imageURL="https://framerusercontent.com/images/PIlOZWlmobm4uLtBhKFfw7HS4.jpg"
+            />
+            <TestimonialsCard
+              message={"The customer support team behind this product is exceptional. They have been incredibly responsive and helpful, addressing any questions or concerns promptly"}
+              name="Sarah"
+              profile="Project Manager"
+              imageURL="https://framerusercontent.com/images/OOtXrjMtLK5Xx3QTQXHynwpqYi4.jpg"
+            />
+          </div>
         </div>
       </section>
 
@@ -316,26 +345,26 @@ function Home() {
             <h1>Unleash your <span>Potential</span> with us</h1>
             <h3>Join our community of ambitious individuals and organizations eager to make a difference.</h3>
             {isHovered ? (
-            
-            <button style={divStyle}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleMouseOut}
-              className="start-button"
-            >
-              Try Out Now <FontAwesomeIcon icon={faCircleArrowRight} style={{ color: "#ffffff" }} />
-            </button>
 
-          
-        ) : (
-          <button 
-            onMouseEnter={handleHover}
-            onMouseLeave={handleMouseOut}
-            className="start-button"
-          >
-            Get Started
-          </button>
-          
-        )}
+              <button style={divStyle}
+                onMouseEnter={handleHover}
+                onMouseLeave={handleMouseOut}
+                className="start-button"
+              >
+                Try Out Now <FontAwesomeIcon icon={faCircleArrowRight} style={{ color: "#ffffff" }} />
+              </button>
+
+
+            ) : (
+              <button
+                onMouseEnter={handleHover}
+                onMouseLeave={handleMouseOut}
+                className="start-button"
+              >
+                Get Started
+              </button>
+
+            )}
           </div>
           <div className="join-img">
             <img src={people}></img>

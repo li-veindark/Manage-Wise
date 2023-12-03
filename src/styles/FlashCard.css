@@ -2,6 +2,29 @@
   height: 100%;
   border-radius: 30px;
   border: 1px solid #ededfa;
+  animation: moveFromBottomBox 0.8s ease-in-out forwards,
+    bubble 0.7s ease-in-out forwards 0.6s;
+}
+
+@keyframes moveFromBottomBox {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(4%);
+    opacity: 1;
+  }
+}
+
+@keyframes bubble {
+  0%,
+  100% {
+    transform: translateY(4%);
+  }
+  50% {
+    transform: translateY(0);
+  }
 }
 
 .flashcard img {

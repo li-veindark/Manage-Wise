@@ -5,7 +5,26 @@
   background: #f7f8fd;
   margin-bottom: 2vh;
   padding: 1vh 0;
+  animation: moveFromBottomfaq 1.5s ease-out forwards 0.1s;
   position: relative;
+}
+
+@keyframes moveFromBottomfaq {
+  0% {
+    transform: translateY(80%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(4%);
+    opacity: 1;
+  }
+
+  90%{
+    transform: translateY(6%);
+  }
+  100%{
+    transform: translateY(4%);
+  }
 }
 
 .faqBox h2 {
