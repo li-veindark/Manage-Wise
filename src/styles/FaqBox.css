@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.faqBox {
+  border-radius: 20px;
+  background: #f7f8fd;
+  margin-bottom: 2vh;
+  padding: 1vh 0;
+  position: relative;
+}
+
+.faqBox h2 {
+  color: #1c1c1c;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32.5px; /* 130% */
+  letter-spacing: -0.5px;
+  text-align: left;
+  margin-left: 2.5vw;
+  width: 80%;
+}
+
+.faqBox p {
+  color: #767575;
+  text-align: left;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  width: 80%;
+  margin: -0.5vh 0 0 2.5vw;
+  padding-bottom: 3vh;
+}
+
+.faqBox .visible {
+  height: 10vh;
+  overflow: hidden;
+  transition: height 0.9s ease;
+}
+
+.visible h2 {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.faqBox button {
+    background-color: #f7f8fd;
+    border: none;
+    margin-top: 1.5vh;
+    position: absolute;
+    right: 5%;
+    
+}
+
+.faqBox button:hover{
+    border: none;
+}
+
+.plus-icon {
+    font-size: 28px;
+}
+
+.faqBox .invisible {
+  height: 25vh; 
+  overflow: hidden;
+  transition: height 0.9s ease;
+}
+
+.invisible h2 {
+  display: inline-block;
+  color: #8247ff;
+  cursor: pointer;
+}
+
+.mark-icon {
+    font-size: 28px;
+}

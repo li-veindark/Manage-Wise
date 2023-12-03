@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.testmonial-card {
+  border-radius: 30px;
+  border: 1px solid #ededfa;
+  margin: 0 15px;
+}
+
+.testmonial-card p {
+  color: #1c1c1c;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 75%;
+  margin: 7vh auto 4vh;
+}
+
+.testmonial-card .profile {
+  width: 75%;
+  margin: 2vh auto 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  flex: 40;
+}
+
+.profile-info{
+    flex: 60;
+    margin-left: 10px;
+}
+
+.profile img {
+  width: 25%;
+}
+
+.profile h3 {
+  width: 100%;
+  color: #1c1c1c;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 150% */
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.profile h4 {
+  color: #767575;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+}

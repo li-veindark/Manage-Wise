@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.footer {
+  background: #fdf2ec;
+  padding: 10vh 0 1vh;
+}
+
+.footer-info {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-info img {
+  width: 15%;
+}
+
+.footer-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-info li {
+  display: block;
+  margin-bottom: 1.5vh;
+  color: #1c1c1c;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  /* margin-left: 15vw; */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 16vh auto 5vh;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: 1px solid rgba(118, 117, 117, 0.10);
+}
+
+.footer-icons p {
+  margin-top: 5vh;
+  margin-bottom: 0;
+  margin-right: 0;
+  color: #333;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+
+.social-media .ss-icon {
+  font-size: 32px;
+  margin-left: 20px;
+}

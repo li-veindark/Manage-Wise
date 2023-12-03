@@ -1,0 +1,32 @@
+.flashcard {
+  height: 100%;
+  border-radius: 30px;
+  border: 1px solid #ededfa;
+}
+
+.flashcard img {
+  width: 100%;
+}
+
+.flashcard h2 {
+  width: 90%;
+  margin: 3vh auto 2vh;
+  color: #1c1c1c;
+  font-family: Outfit;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32.5px; /* 130% */
+  letter-spacing: -0.5px;
+}
+
+.flashcard p {
+  width: 90%;
+  margin: 0 auto 4vh;
+  color: #767575;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}

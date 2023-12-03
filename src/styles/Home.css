@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/*<---------------- WELCOME SECTION CSS--------------------------> */
+
+#welcome {
+  background: linear-gradient(180deg, #fdf2ec 0%, #fff 100%);
+  padding-top: 14vh;
+}
+
+#welcome h1 {
+    margin: 2vh 0;
+    color: #1c1c1c;
+    font-family: Outfit;
+    font-size: 105px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100px;
+    letter-spacing: -2px;
+    width: 80%;
+  
+    
+    animation: moveFromBottom 0.8s ease-in-out forwards, 
+               bubble 0.7s ease-in-out forwards 0.6s;
+  }
+  
+  @keyframes moveFromBottom {
+    from {
+      transform: translateY(30%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(4%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bubble {
+    0%, 100% {
+      transform: translateY(4%);
+    }
+    50% {
+      transform: translateY(0) ;
+    }
+  }
+  
+
+   
+
+span {
+  color: #fe8162;
+}
+
+#welcome h3 {
+  margin: 4vh 0 4vh;
+  color: #767575;
+  text-align: center;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 45%;
+  animation: moveFromBottomh3 0.8s ease-in-out forwards, 
+               bubble 0.7s ease-in-out forwards 0.6s;
+}
+
+@keyframes moveFromBottomh3 {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(4%);
+      opacity: 1;
+    }
+  }
+
+.start-button {
+  
+  border-radius: 20px;
+  background: #8247ff;
+  color: #fff;
+  padding: 23px 45px;
+  margin-right: 2vw;
+  font-family: Outfit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  animation: moveFromBottomButton 0.6s ease-in-out forwards, 
+               bubble 0.7s ease-in-out forwards 0.5s;
+}
+
+.start-button:hover {
+  border: none;
+  outline: 10px solid #e5d2f5;
+  border-radius: 24px;
+  transition: 0.5s ease-in;
+}
+
+.demo-button {
+  border-radius: 20px;
+  background: #fff;
+  padding: 23px 42px;
+  border: 1px solid #ddd9d4;
+  font-family: Outfit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  animation: moveFromBottomButton 0.6s ease-in-out forwards, 
+               bubble 0.9s ease-in-out forwards 0.5s;
+}
+
+.demo-button:hover {
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes moveFromBottomButton {
+    from {
+      transform: translateY(70%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(4%);
+      opacity: 1;
+    }
+  }
+
+#welcome img {
+  display: block;
+  width: 85%;
+  margin: 10vh auto;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: height 0.3s ease, width 0.3s ease;
+  box-shadow: 1px 12px 25px #888888;
+}
+
+/*----------------------------- FEATURES SECTION CSS------------------------- */
+#features {
+  margin: 15vh auto;
+  width: 78%;
+}
+
+.features h1 {
+  color: #1c1c1c;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 73px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin: 3vh 0;
+}
+
+.features h3 {
+  color: #767575;
+  text-align: center;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 50%;
+  margin-bottom: 8vh;
+}
+
+.features-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10vh;
+}
+
+.left-box {
+  border-radius: 30px;
+  border: 1px solid #ededfa;
+  width: 50%;
+  padding: 120px 0;
+  background-color: #ededfa;
+}
+
+.left-box .star {
+  margin: 0 0 -5vh 3vw;
+  font-size: 40px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.left-box p {
+  color: #1c1c1c;
+  font-family: Outfit;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 65px;
+  width: 85%;
+  margin: 7vh auto -6vh;
+}
+
+.right-box {
+  width: 50%;
+  border-radius: 30px;
+  border: 1px solid #ededfa;
+}
+
+.right-box img {
+  width: 100%;
+}
+
+.right-box h1 {
+  color: #1c1c1c;
+  font-family: Outfit;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32.5px;
+  letter-spacing: -0.5px;
+  margin: 5vh auto -1vh;
+  width: 90%;
+  text-align: left;
+}
+
+.right-box h3 {
+  color: #767575;
+  font-family: Inter;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: left;
+}
+
+.features-flashcards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3vw;
+  margin: 8vh 0;
+}
+
+/*-------------------------- DARK FEATURES CSS------------------------------ */
+
+.dark-features {
+  background-color: #1c1c1c;
+  padding: 16vh 10vw;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.dark-features h1 {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 73px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 72px;
+  letter-spacing: -1px;
+  margin: 3vh 0;
+}
+
+.dark-features h3 {
+  color: #767575;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 45%;
+  margin-bottom: 8vh;
+}
+
+.dark-flashcards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vw;
+}
+
+/*--------------------------- INTEGRATIONS CSS------------------------ */
+
+.integrations {
+  background-color: #1c1c1c;
+  padding-top: 12vh;
+  border-bottom: solid 0.1px #1c1c1c;
+}
+
+.integrations h1 {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 73px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 72px;
+  letter-spacing: -1px;
+  width: 45%;
+  margin: 2vh auto;
+}
+
+.integrations h3 {
+  color: #767575;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 32%;
+  margin-bottom: 10vh;
+}
+
+.integrations img {
+  width: 40%;
+  margin: 0;
+}
+
+/*--------------------------- FAQS CSS-------------------------------------- */
+
+.faq {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 25vh auto;
+}
+
+.faq h1 {
+  color: #1c1c1c;
+  text-align: left;
+  font-family: Outfit;
+  font-size: 73px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+  letter-spacing: -1px;
+  margin: 3vh 0;
+  width: 40%;
+}
+
+.faq h3 {
+  color: #767575;
+  text-align: left;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 60%;
+  /* margin-bottom: 22vh; */
+}
+
+.faq-content {
+  flex: 40;
+}
+
+.faq-questions {
+  flex: 60;
+}
+
+/*---------------------- PRICING CSS---------------------------------- */
+
+.pricing {
+  width: 80%;
+  margin: 0 auto 10vh;
+}
+
+.pricing h1 {
+  color: #1c1c1c;
+  font-family: Outfit;
+  font-size: 73px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+  letter-spacing: -1px;
+  margin: 3vh 0;
+}
+
+.pricing h3 {
+  color: #767575;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 40%;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.1vw;
+}
+
+/* -------------------------TESTIMONIALS CSS------------------------------------ */
+
+.testimonials {
+  margin: 25vh auto 10vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonials-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.testimonials h1 {
+  color: #1c1c1c;
+  font-family: Outfit;
+  font-size: 73px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+  letter-spacing: -1px;
+  margin: 3vh 0;
+  text-align: left;
+}
+
+.testimonials h3 {
+  color: #767575;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 50%;
+  text-align: left;
+}
+
+.testimonials-cards {
+  margin: 10vh auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.1vw;
+  display: flex;
+  /* animation: scrollRight 5s linear infinite; */
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(25%); /* Adjust based on the width of cards */
+  }
+}
+
+/*----------------------- JOINING SECTION CSS---------------------------------- */
+.join{
+    background: linear-gradient(180deg, #FFF 0%, #FDF2EC 100%);
+    padding-bottom: 5vh;
+}
+.join-box {
+  width: 80%;
+  margin: 0 auto 10vh;
+  display: flex;
+  flex-direction: row;
+  border-radius: 35px;
+  background: #fff;
+  border: 2px solid #ededfa;
+
+}
+
+.join-content {
+  margin: 15vh;
+  margin-right: 0;
+  flex: 40;
+}
+
+.join h1 {
+    color: #1c1c1c;
+    font-family: Outfit;
+    font-size: 73px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: -1px;
+    margin: 3vh 0;
+    text-align: left;
+    width: 90%;
+}
+
+.join h3{
+    color: #767575;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px; /* 150% */
+    letter-spacing: -0.5px;
+    width: 80%;
+    text-align: left;
+}
+
+.join-img{
+    flex: 50;
+}
+
+.join-img img{
+    width: 80%;
+    margin: 15vh auto;
+}

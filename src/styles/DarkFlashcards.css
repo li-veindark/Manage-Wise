@@ -1,0 +1,41 @@
+.darkCards {
+  flex: 1;
+
+  background-color: #212121;
+  text-align: center;
+  border-radius: 30px;
+  padding-top: 8vh;
+}
+
+.darkCards h2 {
+  color: #fdf2ec;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32.5px;
+  letter-spacing: -0.5px;
+  width: 80%;
+  margin: 3vh auto 2vh;
+}
+
+.darkCards p {
+  color: #767575;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  width: 80%;
+  margin: 0 auto 8vh;
+}
+
+.dark-icons {
+  font-size: 40px;
+  background-color: #8247ff;
+  padding: 20px 24px;
+  border-radius: 25px;
+  
+}

@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.pricingCard {
+  border-radius: 40px;
+  padding: 0 3vh;
+  background: #ededfa;
+  margin-top: 7vh;
+}
+
+.pricingTitle {
+  border-radius: 15px;
+  background: #fff;
+  color: #fe8162;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14.4px; /* 120% */
+  letter-spacing: 0.96px;
+  padding: 0 10px;
+  height: 30px;
+  margin: 8vh 1.5vw 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricingCard h2 {
+  color: #1c1c1c;
+  text-align: left;
+  font-family: Outfit;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px; /* 100% */
+  letter-spacing: -1px;
+  margin: 4vh 1.5vw;
+}
+
+.pricingCard span {
+  color: #333;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px; /* 130% */
+}
+
+.pricingCard ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 6vh 1.5vw;
+}
+
+.pricingCard li {
+  display: block;
+  margin-bottom: 1vh;
+  color: #767575;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+
+.pricingCard button {
+  border-radius: 20px;
+  background: #fff;
+  padding: 22px 40px;
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 4vh 1.5vw;
+}
+
+.pricingCard button:hover {
+  transition: 0.5s ease-in;
+  outline: 1px solid #ddd9d421;
+}
