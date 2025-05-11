@@ -10,25 +10,23 @@ This is a small, fully responsive frontend application built using React.js. It 
 
 ## 🛠️ Tech Stack
 - React.js – Core UI library
-
 - JavaScript (ES6+) – App logic
-
 - HTML5 & CSS3 – Structure and styling
-
 - Netlify – Deployment
 
 ---
 
-🧩 Installation & Development
+## 🧩 Installation & Development
 To run this project locally:
+```javascript
 git clone https://github.com/li-veindark/Manage-Wise.git
 cd your-repo-name
 npm install
 npm start
+```
 
-
-🧪 Deployment
+### 🧪 Deployment
 This project is deployed via Netlify. Pushes to the main branch automatically trigger new deployments.
 
-📌 Contributing
+### 📌 Contributing
 If you'd like to suggest improvements or contribute features, feel free to fork the repository and create a pull request.
