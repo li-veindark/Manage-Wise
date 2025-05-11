@@ -21,7 +21,7 @@ This is a small, fully responsive frontend application built using React.js. It 
 
 🧩 Installation & Development
 To run this project locally:
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/li-veindark/Manage-Wise.git
 cd your-repo-name
 npm install
 npm start
